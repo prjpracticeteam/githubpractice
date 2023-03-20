@@ -20,7 +20,7 @@ class intersect(pr_proc):
             write_file.writefile(self.result, result_data[0])
             return [self.list_1[1],self.list_2[1],result_data[1]]
         else:
-            raise Exception("Make sure the Give inpout files has the data ...")
+            raise Exception("Make sure, the given input files has the data ...")
 
 
 if __name__ == '__main__':
@@ -33,7 +33,7 @@ if __name__ == '__main__':
                   f"{sys.argv[3]}: {res_len[2]}, Time taken: {int(time.time() - start_time)}")
             sys.exit(0)
         else:
-            raise Exception("The sys.args parameter not matched", parser.parser())
+            raise Exception("The parameters are not matching", parser.parser())
     except FileNotFoundError as file_err:
         print(file_err)
     except ValueError as val_err:
