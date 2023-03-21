@@ -6,9 +6,9 @@ def read(file):
     try:
         # file validation
         with open(file, 'r') as f:
-            l = f.readlines()
+            rl = f.readlines()
             li = []
-            for i in l:
+            for i in rl:
                 if i.strip():
                     li.append(i)
             if len(li) <= 0:
@@ -26,33 +26,33 @@ def read(file):
         sys.exit(1)
     
         
-def union(l1,l2):
-    l3 = {}
-    l3.update(l1)
-    l3.update(l2)
-    l4 = {}
-    for i in l3:
-        if i not in l4:
-            l4[i] = True
-    return l4
+def union(d1,d2):
+    d3 = {}
+    d3.update(d1)
+    d3.update(d2)
+    u = {}
+    for i in d3:
+        if i not in u:
+            u[i] = True
+    return u
 
-def intersec(l1,l2):
-    l3 = {}
-    for i in l1:
-        if i in l2:
-            l3[i] = True
-    return l3
+def intersec(d1,d2):
+    inter = {}
+    for i in d1:
+        if i in d2:
+            inter[i] = True
+    return inter
 
-def minus(l1,l2):
-    l3 = {}
-    for i in l1:
-        if i not in l2:
-            l3[i] = True
-    return  l3  
+def minus(d1,d2):
+    m = {}
+    for i in d1:
+        if i not in d2:
+            m[i] = True
+    return  m  
 
-def write(file3, output):
-    with open(file3, "w") as f3:
-        f3.writelines(output)
+def write(file, output):
+    with open(file, "w") as f:
+        f.writelines(output)
 
 
 if __name__ == "__main__":
