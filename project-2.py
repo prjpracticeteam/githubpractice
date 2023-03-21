@@ -67,7 +67,7 @@ def div9(n):
     else:
         return sum in [9]
 
-raw_num = input("Enter the numbers: ")
+raw_num = "100,23,81"
 num = raw_num.split(',')
 functions = [div2,div3,div4,div5,div6,div7,div8,div9]
 for i in num:
