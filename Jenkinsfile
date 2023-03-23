@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent docker
     stages{
         stage('docker image Execution') {
            agent { docker {image 'python:latest'} }
