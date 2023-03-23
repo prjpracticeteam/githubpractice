@@ -3,20 +3,20 @@ pipeline {
         docker { 
             image 'python:latest'
         stages {
-        stage('Checkout') {
-            steps {
-               checkout scmGit(branches: [[name: '*/project-2-div']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prjpracticeteam/githubpractice.git']])
+            stage('Checkout') {
+                steps {
+                    checkout scmGit(branches: [[name: '*/project-2-div']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prjpracticeteam/githubpra
+                }
             }
-        }
-        }    
-        stage('Run python program') {
-            steps {
+            
+            stage('Run python program') {
+                steps {
                
-                sh 'python main.py'
-            }
-        }                 
-           
+                    sh 'python main.py'
+                }
+            }                 
+        }  
         
+        }
     }
-}
 }
