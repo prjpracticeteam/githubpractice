@@ -14,7 +14,7 @@ pipeline {
                 sh 'python main.py'
             }
         }                 
-           }
-        }
+           
+        
     }
 }
