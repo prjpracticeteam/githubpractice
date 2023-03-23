@@ -6,7 +6,7 @@ pipeline {
         stages {
         stage('Checkout') {
             steps {
-               checkout scmGit(branches: [[name: '*/project-2-div']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prjpracticeteam/githubpractice.git']])ice.git']]])
+               checkout scmGit(branches: [[name: '*/project-2-div']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prjpracticeteam/githubpractice.git']])
             }
         }
         stage('Run python program') {
