@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages{
         stage('docker image Execution') {
-           agent {  docker image 'python:latest' }
+            agent {  docker image {'python:latest'} }
         stages {
         stage('Checkout') {
             steps {
