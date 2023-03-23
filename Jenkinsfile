@@ -5,7 +5,7 @@ pipeline {
         stages {
             stage('Checkout') {
                 steps {
-                    checkout scmGit(branches: [[name: '*/project-2-div']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prjpracticeteam/githubpracheckout scmGit(branches: [[name: '*/project-2-div']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prjpracticeteam/githubpractice.git']])
+                      checkout scmGit(branches: [[name: '*/project-2-div']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prjpracticeteam/githubpractice.git']])
                 }
             }
             
