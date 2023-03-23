@@ -1,21 +1,20 @@
 pipeline {
     agent any
-    stages{
-        stage('docker image Execution') {
-           agent { docker {image 'python:latest'} }
-        stages {
-        stage('Checkout') {
+    stages {
+        stage('docker image  build') {
             steps {
-               checkout([$class: 'GitSCM', branches: [[name: '*/feat-project2']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prjpracticeteam/githubpractice.git']]])
+                sh 'docker build .'
             }
         }
-        stage('Run python program') {
-            steps {
-                git branch: 'feat-project2', url: 'https://github.com/prjpracticeteam/githubpractice.git'
-                sh 'python hashmap.py L1.txt L2.txt R.txt'
+        stage('checkout '){
+            steps{
+                checkout([$class: 'GitSCM', branches: [[name: '*/feat-project2']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prjpracticeteam/githubpractice.git']]])
             }
-        }                 
-           }
+        }
+        stage('git '){
+            steps{
+                git branch: 'feat-project2', url: 'https://github.com/prjpracticeteam/githubpractice.git'
+            }
         }
     }
 }
