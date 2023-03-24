@@ -13,10 +13,10 @@ pipeline {
         stage('Run python program') {
             steps {
                
-               }
+        }
         }                 
            }
-        }
+       }
     }
 }
 }
