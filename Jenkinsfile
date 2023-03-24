@@ -2,7 +2,8 @@ pipeline {
     agent any
     stages{
         stage('docker image Execution') {
-            agent {  docker {image 'python:latest'} }
+            steps {
+                sh 'docker build .'
         stages {
         stage('Checkout') {
             steps {
@@ -11,7 +12,7 @@ pipeline {
         }
         stage('Run python program') {
             steps {
-                sh 'python main.py '
+               
             }
         }                 
            }
